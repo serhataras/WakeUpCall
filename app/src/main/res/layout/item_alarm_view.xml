@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_margin="10dp"
+            >
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:id="@+id/alarmCard">
+        <TextView
+                android:text="00:00"
+                android:id="@+id/alarmViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="100sp" android:layout_marginLeft="10dp"/>
+        <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/alarmViewTime">
+            <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" android:checked="true"
+                    android:id="@+id/isEnabled"/>
+        </FrameLayout>
+        <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_below="@+id/alarmViewTime" android:columnCount="7"
+                android:rowCount="1" android:layout_centerHorizontal="true">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="MON" android:id="@+id/mon"
+                    android:layout_row="0" android:layout_column="0"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" android:enabled="false"
+                    />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="TUE" android:id="@+id/tue"
+                    android:layout_row="0" android:layout_column="1"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" android:enabled="false"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="WED" android:id="@+id/wed"
+                    android:layout_row="0" android:layout_column="2"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" android:enabled="false"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="THU" android:id="@+id/thu"
+                    android:layout_row="0" android:layout_column="3"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" android:enabled="false"
+                    />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="FRI" android:id="@+id/fri"
+                    android:layout_row="0" android:layout_column="4"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" android:enabled="false"
+                    />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="SAT" android:id="@+id/sat"
+                    android:layout_row="0" android:layout_column="5"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" android:enabled="false"
+                    />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="SUN" android:id="@+id/sun"
+                    android:layout_row="0" android:layout_column="6"
+                    android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" android:enabled="false"
+                    />
+        </GridLayout>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:background="@color/secondary_text_default_material_light" android:id="@+id/undoView">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_delete"
+                        android:gravity="center_vertical"
+                        android:text="ALARM IS DELETED"
+                        android:clickable="false"
+                        android:textSize="25sp"
+                        android:hapticFeedbackEnabled="true" android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp" android:textStyle="bold" android:textColor="@color/background_floating_material_light"/>
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:id="@+id/txt_undo"
+                        android:text="UNDO"
+                        android:clickable="false"
+                        android:textSize="25sp"
+                        android:textColor="?android:colorAccent"
+                        android:layout_alignParentEnd="true" android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp" android:textStyle="italic"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

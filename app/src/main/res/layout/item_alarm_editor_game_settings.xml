@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <android.support.v7.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_margin="10dp">
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Game Settings"
+                    android:id="@+id/gameTitle" android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"/>
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" android:id="@+id/relativeLayout"
+                    android:layout_below="@+id/gameTitle" android:layout_alignParentStart="true">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Number Of Games"
+                        android:layout_centerVertical="true" android:layout_alignParentStart="true"
+                        android:layout_marginLeft="10dp"/>
+                <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true">
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+"
+                            android:id="@+id/incGames"
+                            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+                            android:nestedScrollingEnabled="false" android:onClick="increaseNumberOfGames"/>
+                    <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/decGames"
+                            android:layout_alignParentTop="true" android:layout_toEndOf="@+id/noOfGames"
+                            android:onClick="decreaseNumberOfGames"/>
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="0"
+                            android:id="@+id/noOfGames"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toEndOf="@+id/incGames" android:layout_centerVertical="true"
+                            android:layout_marginRight="20dp"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout" android:layout_alignParentStart="true">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Difficulty Level" android:layout_marginLeft="10dp"
+                        android:id="@+id/textView" android:layout_centerVertical="true"/>
+                <SeekBar
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/difficultySeekBar" android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/textView" android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" android:max="2" android:progress="0"
+                        android:indeterminate="false"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="com.groupnamenotfoundexception.wakeupcall.app.activities.LazyKiller"
+              android:weightSum="1" android:orientation="vertical"
+              android:padding="@dimen/abc_action_bar_default_padding_material">
+    <View android:layout_width="match_parent"
+          android:layout_height="172dp"
+          android:background="#ff4e1b20"
+          android:id="@+id/gameview" android:layout_weight="0.15" style="@style/AppTheme"
+          android:importantForAccessibility="yes" android:longClickable="false" android:theme="@style/AppTheme"/>
+    <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:indeterminate="false"/>
+
+    <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignEnd="@+id/button2"
+            android:layout_gravity="center" android:layout_weight="0.76">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent" android:layout_gravity="center" >
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="7"
+                    android:id="@+id/editText" android:layout_gravity="center_horizontal|bottom"
+                    android:singleLine="true"
+                    android:autoText="true" android:elegantTextHeight="false"
+                    android:shadowColor="@color/button_material_light"
+                    android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp" android:layout_below="@+id/questionView"/>
+            <Button
+                    style="@style/Widget.AppCompat.ButtonBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OK"
+                    android:id="@+id/button2"
+                    android:enabled="true"
+                    android:focusable="false" android:focusableInTouchMode="true" android:clickable="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_alignEnd="@+id/editText"
+                    android:onClick="playLK"
+                    android:layout_alignBottom="@+id/editText" android:layout_alignRight="@+id/editText"/>
+            <view android:layout_width="70dp"
+                  android:layout_height="70dp"
+                  class="android.support.v7.widget.AppCompatTextView" android:id="@+id/questionView"
+                  android:layout_gravity="center" android:theme="@style/AppTheme"
+                  style="@style/Base.Widget.AppCompat.Light.ActionBar.TabView"
+                  android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+                  android:layout_alignParentEnd="false" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="find the occurence of the color that provided right here"
+                android:id="@+id/textView2"
+                android:gravity="center_vertical|center_horizontal" android:singleLine="false"
+                android:layout_weight="0.09"
+                android:layout_gravity="center_horizontal|top" android:textSize="@dimen/abc_text_size_title_material"
+                android:layout_margin="10dp"/>
+    </FrameLayout>
+
+</LinearLayout>

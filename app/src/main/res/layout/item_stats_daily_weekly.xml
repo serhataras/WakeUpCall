@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <view android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          class="android.support.v7.widget.CardView"
+          android:layout_gravity="center_horizontal" android:layout_margin="10dp">
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Daily Sleep" android:layout_alignParentTop="true" android:layout_alignParentStart="true"
+                android:id="@+id/textView3"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Weekly Sleep" android:layout_alignParentTop="true" android:layout_alignParentEnd="true"
+                android:id="@+id/textView4"/>
+        <ImageView
+                android:layout_width="125dp"
+                android:layout_height="150dp"
+                android:id="@+id/dailySleepSmiley" android:layout_gravity="left|center_vertical"
+                android:src="@drawable/nodata" android:layout_below="@+id/textView3"
+                android:layout_alignParentStart="true"/>
+        <com.todddavies.components.progressbar.ProgressWheel
+                android:id="@+id/weeklySleep"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                ProgressWheel:text="0.0 Hours"
+                ProgressWheel:textColor="#222"
+                ProgressWheel:textSize="14sp"
+                ProgressWheel:rimColor="#FFFFFFFF"
+                ProgressWheel:barLength="60dp"
+                ProgressWheel:barColor="?android:attr/colorAccent"
+                ProgressWheel:barWidth="10dp"
+                ProgressWheel:rimWidth="10dp"
+                android:layout_below="@+id/textView4" android:layout_alignEnd="@+id/textView4"/>
+    </RelativeLayout>
+    </view>
+</LinearLayout>

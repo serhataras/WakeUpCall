@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.groupnamenotfoundexception.wakeupcall.app.fragments.ArcadeFragment">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Highscore : 0"
+            android:id="@+id/highscore" android:layout_alignParentTop="true" android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:text="Game List"
+            android:id="@+id/gameList" android:layout_below="@+id/highscore" android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:onClick="openGameList"/>
+    <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:text="Arcade Mode"
+            android:id="@+id/arcadeMode" android:layout_below="@+id/gameList" android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"
+            android:onClick="openArcade"/>
+</RelativeLayout>

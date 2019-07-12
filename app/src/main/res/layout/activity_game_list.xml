@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.groupnamenotfoundexception.wakeupcall.app.activities.GameListActivity"
+              android:orientation="vertical">
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:text="Simon Game"
+            android:id="@+id/simon"
+            android:layout_margin="1dp" android:onClick="startSimon"/>
+
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:text="Match the Objects"
+            android:id="@+id/match"
+            android:layout_margin="1dp" android:onClick="startMatch"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:text="Shake the Device"
+            android:id="@+id/shake"
+            android:layout_margin="1dp" android:onClick="startShake"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:text="Press All the Blue"
+            android:id="@+id/blue"
+            android:layout_margin="1dp" android:onClick="startBlue"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2"
+            android:text="Lazy Killer"
+            android:id="@+id/lazy_killer"
+            android:layout_margin="1dp" android:onClick="startLazy"/>
+</LinearLayout>

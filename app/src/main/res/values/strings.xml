@@ -1,0 +1,71 @@
+<resources>
+
+
+    <!--App Data Properties-->
+    <string name="app_name">Wake Up Call</string>
+    <string name="action_settings">Credits</string>
+
+    <string name="title_section1">Alarms</string>
+    <string name="title_section2">Stats</string>
+    <string name="title_section3">Arcade</string>
+
+    <string name="title_activity_home">Wake Up Call</string>
+    <string name="title_activity_alarm_editor">Alarm Editor</string>
+    <string name="title_activity_credits">Credits</string>
+
+    <string name="title_activity_simon_game">Simon Game</string>
+    <string name="title_activity_shake_the_device">Shake The Device</string>
+    <string name="title_activity_match_the_objects">Match The Objects</string>
+    <string name="title_activity_press_the_blue">Press The Blue</string>
+    <string name="title_activity_lazy_killer">Lazy Killer</string>
+
+    <string name="title_activity_alarm_alert">ALARM!</string>
+
+    <string name="title_activity_game_list">Game List</string>
+
+    <string name="title_activity_app_selector">Select an App</string>
+    <!--Shared Preferences Names-->
+    <string name="alarms_master">alarms</string>
+    <string name="alarm_prefix">alarm</string>
+
+    <!--Alarm Master Properties-->
+    <string name="number_of_alarms">noOfAlarms</string>
+    <string name="start_of_sleep">startOfSleep</string>
+    <string name="end_of_sleep">endOfSleep</string>
+    <string name="weekly_sleep">weeklySleep</string>
+    <string name="current_week">currentWeek</string>
+    <string name="current_score">currentScore</string>
+    <string name="highscore">highscore</string>
+    <string name="collection_sound">collectionSound</string>
+    <string name="collection_movement">collectionMovement</string>
+
+    <!--Alarm Shared Preferences Keys-->
+        <!--Master Settings / Controls the Usage of the Alarm-->
+    <string name="is_deleted">isDeleted</string>
+    <string name="alarm_index">index</string>
+
+        <!--Alarm Properties-->
+    <string name="hour">hour</string>
+    <string name="minute">min</string>
+    <string name="is_enabled">isEnabled</string>
+
+        <!--Alarm Days-->
+    <string name="monday">mon</string>
+    <string name="tuesday">tue</string>
+    <string name="wednesday">wed</string>
+    <string name="thursday">thu</string>
+    <string name="friday">fri</string>
+    <string name="saturday">sat</string>
+    <string name="sunday">sun</string>
+
+        <!--SMS Properties-->
+    <string name="contacts">contacts</string>
+    <string name="message_body">messageBody</string>
+
+        <!--Game Settings-->
+    <string name="no_of_games">noOfGames</string>
+    <string name="diff_games">difficulty</string>
+
+        <!--After Alarm App-->
+    <string name="app_package_name">appName</string>
+</resources>

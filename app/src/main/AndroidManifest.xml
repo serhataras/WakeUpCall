@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+    package="com.groupnamenotfoundexception.wakeupcall.app" >
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application tools:replace="android:icon,android:theme"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+                android:name=".activities.HomeActivity"
+                android:label="@string/title_activity_home" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.AlarmEditorActivity"
+            android:label="@string/title_activity_alarm_editor" >
+        </activity>
+        <activity
+            android:name=".activities.CreditsActivity"
+            android:label="@string/title_activity_credits" >
+        </activity>
+        <activity
+                android:name=".activities.AfterAlarmAppChooserActivity"
+                android:label="@string/title_activity_app_selector" >
+        </activity>
+        <activity
+            android:name=".activities.games.SimonActivity"
+            android:label="@string/title_activity_simon_game" >
+        </activity>
+        <activity
+                android:name=".activities.games.ShakeTheDeviceActivity"
+                android:label="@string/title_activity_shake_the_device" >
+        </activity>
+        <activity
+                android:name=".activities.games.MatchTheObjectsActivity"
+                android:label="@string/title_activity_match_the_objects" >
+        </activity>
+        <activity
+                android:name=".activities.games.PressTheBlueActivity"
+                android:label="@string/title_activity_press_the_blue" >
+        </activity>
+        <activity
+                android:name=".activities.games.LazyKillerActivity"
+                android:label="@string/title_activity_lazy_killer" >
+        </activity>
+
+        <receiver android:name=".alarm.Receiver" />
+        <receiver
+            android:name=".alarm.Restarter"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".alarm.Scheduler" />
+        <service android:name=".services.AsleepModeDataCollector" />
+        <service android:name=".services.WakingStateChecker" />
+        <service android:name=".services.BeforeSleepManager" />
+        <service android:name=".alarm.AdvancedAlarm" />
+
+        <activity
+            android:name=".activities.GameListActivity"
+            android:label="@string/title_activity_game_list" >
+        </activity>
+        <activity
+            android:name=".activities.AlarmAlertActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_alarm_alert"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+    </application>
+
+</manifest>
